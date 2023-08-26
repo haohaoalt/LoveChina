@@ -1,6 +1,3 @@
-//
-// Created by meng on 2019/10/8.
-//
 #include <iostream>
 #include "i.h"
 
