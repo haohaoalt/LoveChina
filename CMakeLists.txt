@@ -25,3 +25,8 @@ target_link_libraries(i_love_China
         ${PROJECT_NAME}
 )
 
+# 添加可执行文件
+add_executable(LKOpticalFlow src/lkdemo.cpp)
+
+# 链接OpenCV库
+target_link_libraries(LKOpticalFlow ${OpenCV_LIBS})
