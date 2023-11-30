@@ -6,6 +6,7 @@ message("\n #### I love China! #### \n")
 
 set(CMAKE_CXX_STANDARD 11)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 find_package(OpenCV 3 REQUIRED)
 
@@ -29,7 +30,7 @@ target_link_libraries(i_love_China
 )
 
 # 添加可执行文件
-add_executable(LKOpticalFlow src/lkdemo.cpp)
+add_executable(LKOpticalFlow src/OpenCV/lkdemo.cpp)
 
 # Pangolin demo
 add_executable(Pangolindemo src/Pangolin/Pangolin_demo.cpp)

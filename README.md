@@ -17,3 +17,8 @@ Enter the root directory of the current file, then open terminal!
 wget https://www.bogotobogo.com/python/OpenCV_Python/images/mean_shift_tracking/slow_traffic_small.mp4
 ./LKOpticalFlow
 ```
+
+`ubuntu@acd4ed39dee8:~/Dev/docker/u18_cuda/LoveChina/scripts/OpenCV$ python lkflow.py `
+
+![Alt text](images/image.png)
+
