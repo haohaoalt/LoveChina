@@ -9,9 +9,12 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 find_package(OpenCV 3 REQUIRED)
 
+find_package(Pangolin REQUIRED)
+
 include_directories(
         ${PROJECT_SOURCE_DIR}/include/
 )
+include_directories(${Pangolin_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} SHARED
         src/China.cpp
@@ -28,5 +31,10 @@ target_link_libraries(i_love_China
 # 添加可执行文件
 add_executable(LKOpticalFlow src/lkdemo.cpp)
 
+# Pangolin demo
+add_executable(Pangolindemo src/Pangolin/Pangolin_demo.cpp)
+
 # 链接OpenCV库
 target_link_libraries(LKOpticalFlow ${OpenCV_LIBS})
+
+target_link_libraries(Pangolindemo ${Pangolin_LIBRARIES}) #改成自己的项目名
