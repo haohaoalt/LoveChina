@@ -4,7 +4,6 @@
 #include "opencv2/videoio.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/xfeatures2d.hpp"
-#include "GOCVHelper.h"
 
 #include <iostream>
 #include <ctype.h>
@@ -13,11 +12,12 @@ using namespace cv;
 using namespace std;
 using namespace xfeatures2d;
 
-void main()
+int main()
 {
 
     Mat matSrc2 = imread("./data/church02.jpg");
     Mat matSrc3 = imread("./data/church03.jpg");
+    cout << "image read success" << endl;
     Mat gray2;
     Mat gray3;
     cvtColor(matSrc2, gray2, COLOR_BGR2GRAY);
@@ -65,6 +65,6 @@ void main()
         }
     }
     drawMatches(matSrc2, keypoints2, matSrc3, keypoints3, good_matches, img_matches);
-    waitKey(0);
-    return;
+    cv::imshow("result",img_matches);
+    return 0;
 };

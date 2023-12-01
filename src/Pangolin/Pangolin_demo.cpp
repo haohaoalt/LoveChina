@@ -1,5 +1,5 @@
 #include <pangolin/pangolin.h>
-
+using namespace std;
 int main( int /*argc*/, char** /*argv*/ )
 {  
     pangolin::CreateWindowAndBind("Main",640,480);

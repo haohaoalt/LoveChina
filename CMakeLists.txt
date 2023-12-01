@@ -4,10 +4,11 @@ project(learning_to_create_project)
 
 message("\n #### I love China! #### \n")
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
+set(OpenCV_DIR "/home/hayden/App/opencv345/Install/share/OpenCV")
 find_package(OpenCV 3 REQUIRED)
 MESSAGE(STATUS "OpenCV version: ${OpenCV_VERSION}")
 
