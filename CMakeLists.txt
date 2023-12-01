@@ -37,6 +37,8 @@ target_link_libraries(i_love_China
 
 # 添加可执行文件
 add_executable(LKOpticalFlow src/OpenCV/lkdemo.cpp)
+add_executable(orb_feature src/OpenCV/orb_feature.cpp)
+
 
 # Pangolin demo
 add_executable(Pangolindemo src/Pangolin/Pangolin_demo.cpp)
@@ -50,4 +52,7 @@ target_link_libraries(LKOpticalFlow ${OpenCV_LIBS})
 target_link_libraries(Pangolindemo ${Pangolin_LIBRARIES}) #改成自己的项目名
 
 target_link_libraries(min_value ${CERES_LIBRARIES})
+
 target_link_libraries(curve_fitting ${CERES_LIBRARIES} ${OpenCV_LIBS})
+
+target_link_libraries(orb_feature ${OpenCV_LIBS})
