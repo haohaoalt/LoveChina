@@ -22,3 +22,10 @@ wget https://www.bogotobogo.com/python/OpenCV_Python/images/mean_shift_tracking/
 
 ![Alt text](images/image.png)
 
+```
+sudo apt install -y ros-noetic-pcl-ros ros-noetic-velodyne-msgs libopencv-dev libgoogle-glog-dev libeigen3-dev libsuitesparse-dev libpcl-dev libyaml-cpp-dev libbtbb-dev libgmock-dev 
+sudo apt install libcanberra-gtk-module
+```
+
+编译g2o到make即可
+编译Pangolin到make即可

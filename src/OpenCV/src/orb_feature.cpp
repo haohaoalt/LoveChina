@@ -3,7 +3,7 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/videoio.hpp"
 #include "opencv2/highgui.hpp"
-// #include "opencv2/xfeatures2d.hpp"
+#include "opencv2/xfeatures2d.hpp"
 
 #include <iostream>
 #include <ctype.h>
@@ -65,6 +65,9 @@ int main()
         }
     }
     drawMatches(matSrc2, keypoints2, matSrc3, keypoints3, good_matches, img_matches);
-    cv::imshow("result",img_matches);
-    return 0;
+    cout << "good matches: " << good_matches.size() << endl;
+    cv::imshow("result", img_matches);
+    cv::waitKey(0);
+    cv::imwrite("./data/result.jpg", img_matches);
+    cv::destroyAllWindows();
 };
