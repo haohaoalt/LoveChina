@@ -24,6 +24,7 @@ option(BUILD_WITH_UBUNTU1804 OFF)
 
 include(cmake/packages.cmake)
 include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/src/homework)
 include_directories(${PROJECT_SOURCE_DIR}/build/devel/include)
