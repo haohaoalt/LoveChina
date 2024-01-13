@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(hayden-project)
+project(slam)
 
 message("\n #### I love China! #### \n")
 
@@ -23,8 +23,9 @@ message(STATUS "CMAKE_RUNTIME_OUTPUT_DIRECTORY: " ${CMAKE_RUNTIME_OUTPUT_DIRECTO
 option(BUILD_WITH_UBUNTU1804 OFF)
 
 include(cmake/packages.cmake)
-include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/src)
+include_directories(${PROJECT_SOURCE_DIR}/src/homework)
 include_directories(${PROJECT_SOURCE_DIR}/build/devel/include)
 
 add_subdirectory(src)
