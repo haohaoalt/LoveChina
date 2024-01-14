@@ -2,6 +2,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 # subdirectory CMakeLists.txt 文件中
 message("subdirectory: ${CMAKE_CURRENT_SOURCE_DIR}")
 
+ADD_EXECUTABLE(cvversion src/version.cpp )
+target_link_libraries(cvversion ${OpenCV_LIBS})
+
 # # 添加可执行文件 链接OpenCV库
 add_executable(LKOpticalFlow src/lkdemo.cpp)
 target_link_libraries(LKOpticalFlow ${OpenCV_LIBS})

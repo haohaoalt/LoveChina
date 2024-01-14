@@ -15,4 +15,4 @@ target_link_libraries(bundle
         ${QT_QTOPENGL_LIBRARY}
         ${GLUT_LIBRARY}
         ${OPENGL_LIBRARY}
-        )
+)

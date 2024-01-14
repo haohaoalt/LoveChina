@@ -6,6 +6,9 @@ add_subdirectory(OpenCV)
 add_subdirectory(Pangolin)
 add_subdirectory(g2o)
 add_subdirectory(slamdemo)
+add_subdirectory(qt)
+add_subdirectory(cmakedemo)
+
 
 
 add_subdirectory(tools)
