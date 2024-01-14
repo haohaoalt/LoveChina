@@ -8,6 +8,8 @@ add_subdirectory(g2o)
 add_subdirectory(slamdemo)
 add_subdirectory(qt)
 add_subdirectory(cmakedemo)
+add_subdirectory(qt-serial)
+
 
 
 
