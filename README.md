@@ -13,6 +13,7 @@ Enter the root directory of the current file, then open terminal!
 ``make ``
 
 ## 01 LK
+
 ```
 wget https://www.bogotobogo.com/python/OpenCV_Python/images/mean_shift_tracking/slow_traffic_small.mp4
 ./LKOpticalFlow
@@ -31,10 +32,13 @@ sudo apt install libcanberra-gtk-module
 编译Pangolin到make即可
 
 注意opencv编译时打开
+
 ```
 OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable non-free algorithms" ON)
 ```
+
 上面似乎不奏效，还是在cmake时设置
+
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/ubuntu/Dev/docker/u18_cuda/App/opencv345/Install/ -D OPENCV_EXTRA_MODULES_PATH=/home/ubuntu/Dev/docker/u18_cuda/App/opencv345/opencv_contrib/modules/ -D WITH_CUDA=OFF -D BUILD_DOCS=OFF -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -DOPENCV_ENABLE_NONFREE:BOOL=TRUE ..
 ```
@@ -63,6 +67,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/ubuntu/Dev/docke
 
 结果:
 ![Alt text](images/aruco.jpg)
+
 ```
 marker 0 : rvec->[1.87135,1.91877,-0.346457], tvec->[0.0138539,0.0666454,0.234551]
 marker 1 : rvec->[1.78666,1.90724,-0.646364], tvec->[0.110677,0.0647166,0.21952]
@@ -117,7 +122,7 @@ marker 4 : rvec->[1.98997,1.99299,-0.274266], tvec->[0.0113914,-0.0375248,0.2692
   <Input_FlipAroundHorizontalAxis>0</Input_FlipAroundHorizontalAxis>
   
   <!-- Time delay between frames in case of camera. -->
-  <Input_Delay>100</Input_Delay>	
+  <Input_Delay>100</Input_Delay>
   
   <!-- How many frames to use, for calibration. -->
   <Calibrate_NrOfFrameToUse>11</Calibrate_NrOfFrameToUse>
@@ -158,3 +163,7 @@ marker 4 : rvec->[1.98997,1.99299,-0.274266], tvec->[0.0113914,-0.0375248,0.2692
 注: 以上用中文注释的参数需要了解并根据需求配置之外，其它参数可以使用默认的．
 
 ### 标定结果
+
+
+## tbb
+![1705306237405](images/README/1705306237405.png)
