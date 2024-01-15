@@ -5,6 +5,8 @@ project(slam)
 message("\n #### I love China! #### \n")
 
 set(CMAKE_BUILD_TYPE "Release")
+# set(CMAKE_BUILD_TYPE "Debug")
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-w")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g -ggdb ${CMAKE_CXX_FLAGS}")
@@ -30,7 +32,15 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/src/homework)
 include_directories(${PROJECT_SOURCE_DIR}/build/devel/include)
 
+# add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL])
 add_subdirectory(src)
+
+option(TEST "BUILD TEST" OFF)
+if (TEST)
+    message("build test!")
+    add_subdirectory(${PROJECT_SOURCE_DIR}/test)
+endif()
+
 
 
 

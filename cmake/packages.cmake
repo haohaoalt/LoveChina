@@ -55,6 +55,10 @@ set(g2o_libs
         ${CHOLMOD_LIBRARY}
         )
 
+# cuda
+find_package(CUDA REQUIRED)
+include_directories(/usr/local/cuda/include)
+link_directories(/usr/local/cuda/lib64)
 # find_package(Ceres REQUIRED)
 # include_directories(${CERES_INCLUDE_DIRS})
 

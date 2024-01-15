@@ -11,6 +11,7 @@ add_subdirectory(cmakedemo)
 add_subdirectory(qt-serial)
 add_subdirectory(qt-serial1)
 add_subdirectory(tbb)
+add_subdirectory(yolov5-tensorRtx)
 
 
 
