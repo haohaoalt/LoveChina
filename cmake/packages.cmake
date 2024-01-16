@@ -53,14 +53,18 @@ set(g2o_libs
         ${PROJECT_SOURCE_DIR}/thirdparty/g2o/lib/libg2o_types_sba.so
         ${CSPARSE_LIBRARY}
         ${CHOLMOD_LIBRARY}
-        )
+)
+
+# Ceres 使用thirdparty中的
+set(Ceres_DIR ${PROJECT_SOURCE_DIR}/thirdparty/ceres-solver-1.13.0/Install/lib/cmake/Ceres)
+find_package(Ceres REQUIRED)
+include_directories(${CERES_INCLUDE_DIRS})
 
 # cuda
 find_package(CUDA REQUIRED)
 include_directories(/usr/local/cuda/include)
 link_directories(/usr/local/cuda/lib64)
-# find_package(Ceres REQUIRED)
-# include_directories(${CERES_INCLUDE_DIRS})
+
 
 # ros
 # 为了2D scan, pointcloud2

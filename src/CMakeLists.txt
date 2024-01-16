@@ -13,6 +13,7 @@ add_subdirectory(qt-serial1)
 add_subdirectory(tbb)
 add_subdirectory(yolov5-tensorRtx)
 add_subdirectory(cuda)
+add_subdirectory(Ceres)
 
 
 
