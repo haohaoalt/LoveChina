@@ -263,3 +263,16 @@ This script test your CUDA and Pytorch environment.
 ```bash
 wget https://raw.githubusercontent.com/auromix/ros-install-one-click/main/test_cuda.py && python3 test_cuda.py
 ```
+
+
+# NDT_PCL_demo
+使用PCL实现正态分布变换配准的例子
+
+使用：
+
+```bash
+cd build
+cmake ..
+make
+./normal_distributions_transform cloud1.pcd cloud2.pcd
+```

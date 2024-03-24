@@ -2,5 +2,7 @@
 .idea
 /bin/*
 /lib/*
+.vscode/*
+/data/**
 
 
